@@ -1,0 +1,17 @@
+name: "react-app-ci"
+
+on:
+  push:
+    branches:
+      - "react-app"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: build
+        uses: actions/setup-node@v3
+      - run: npm install
